@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light On/Off Project</title>
+</head>
+<style>
+    body{
+        background-color: cornflowerblue;
+    }
+    h1{
+        text-align: center;
+        font-size: 50px;
+        background-color: rgb(255, 136, 0);
+        border: 10px solid rgb(155, 35, 155);
+        border-radius: 30px ;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.767);
+        
+    }
+    h2{
+        text-align: center;
+        width: 50%;
+        height: 60px;
+        padding-top: 10px;
+        font-size: 40px;
+        background-color: rgb(96, 255, 96);
+        border: 8px solid rgb(238, 76, 12);
+        border-radius: 20px;
+        margin-left: 21%;
+        box-shadow: 0 0 20px rgb(0, 0, 0);
+
+    }
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .container{
+        width: 100%;
+        
+    }
+    button{
+        width: 120px;
+        height: 40px;
+        margin: 60px 20px;
+        font-size: 16px;
+        outline: none;
+        background-color: white;
+        border-radius: 7px;
+        border: 1px solid black;
+        font-family:'Roboto', sans-serif;
+
+    }
+    button:hover{
+        cursor: pointer;
+        background-color: coral;
+        border: 1px solid white;
+        color: white;
+
+    }
+    
+</style>
+<body>
+
+    <h1>My First Javascript Pratice</h1>
+
+    <h2>Light On/Off Project</h2>
+
+    <div class="container flex">
+        <img class="bulboff" src="light-bulb-off.png" alt="Bulb Off" srcset="">
+        <div class="btn">
+            <button class="bulb-on" onclick="bulbOn()">ON</button>
+            <button class="bulb-on" onclick="bulbOff()">OFF</button>
+        </div>
+
+    </div>
+
+    <script>
+        
+
+        function bulbOn(){
+            let bulbobj = document.querySelector(".bulboff")
+            bulbobj.setAttribute("src", "light-bulb-on.png")
+        }
+        function bulbOff(){
+            let bulbobj = document.querySelector(".bulboff")
+            bulbobj.setAttribute("src", "light-bulb-off.png")
+        }
+    </script>
+    
+</body>
+</html>
